@@ -22,15 +22,46 @@
       height: 100%;
       min-height: 200px;
     }
-    /* Responsive : s'adapte à la taille de l'iframe */
+    
+    /* Rendre la scène 3D responsive */
+    #lon-livewatch .lon-livewatch__scene-container {
+      transform-origin: center center;
+    }
+    
+    /* Ajuster la taille globale selon la hauteur de la fenêtre */
+    @media (max-height: 300px) {
+      #lon-livewatch {
+        font-size: 12px;
+      }
+      #lon-livewatch .lon-livewatch__scene-container {
+        transform: scale(0.8);
+      }
+    }
+    
+    @media (max-height: 200px) {
+      #lon-livewatch {
+        font-size: 10px;
+      }
+      #lon-livewatch .lon-livewatch__scene-container {
+        transform: scale(0.6);
+      }
+    }
+    
+    /* Responsive : s'adapte à la largeur */
     @media (max-width: 768px) {
       #lon-livewatch {
         font-size: 14px;
+      }
+      #lon-livewatch .lon-livewatch__scene-container {
+        transform: scale(0.9);
       }
     }
     @media (max-width: 480px) {
       #lon-livewatch {
         font-size: 12px;
+      }
+      #lon-livewatch .lon-livewatch__scene-container {
+        transform: scale(0.7);
       }
     }
     @font-face {
